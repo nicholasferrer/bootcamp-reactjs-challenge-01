@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Button = props => (
-  <button onClick={this.props.onClick}>{this.props.children}</button>
+  <button onClick={props.onClick}>{props.children}</button>
 );
 
 Button.defaultProps = {
