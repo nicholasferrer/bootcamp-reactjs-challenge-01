@@ -5,18 +5,18 @@ import PostHeader from './PostHeader';
 
 const Post = props => (
   <div className="post">
-    <PostHeader avatar={props.data.avatar} name={props.data.name} time={props.data.time} />
-    <p>{props.data.body}</p>
+    <PostHeader avatar={props.data.avatar} name={props.data.author} time={props.data.createdAt} />
+    <p>{props.data.content}</p>
   </div>
 );
 
 Post.propTypes = {
   data: PropTypes.shape({
     id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
     avatar: PropTypes.string.isRequired,
-    time: PropTypes.string.isRequired,
-    body: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
   }).isRequired,
 };
 
